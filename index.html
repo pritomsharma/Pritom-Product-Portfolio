@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MCP Explained — The Model Context Protocol for Business</title>
+<meta name="description" content="An end-to-end, business-friendly explainer of the Model Context Protocol (MCP): what it is, the problem it solves, how it works, and why it matters." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<!-- Progress bar -->
+<div id="progress"></div>
+
+<!-- Navigation -->
+<header class="nav">
+  <a class="brand" href="#top">
+    <span class="brand-mark">MCP</span>
+    <span class="brand-sub">Explained for Business</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#what">What</a>
+    <a href="#why">Why</a>
+    <a href="#how">How</a>
+    <a href="#flow">In Action</a>
+    <a href="#uses">Use Cases</a>
+    <a href="#value">Value</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">The Model Context Protocol · A plain-English guide</p>
+      <h1>How AI assistants safely connect to <span class="grad">your business</span>.</h1>
+      <p class="lede">
+        AI is brilliant at language — but on its own it's locked in a room with no phone,
+        no files, and no tools. <strong>MCP is the universal adapter</strong> that lets AI
+        securely reach your real systems: your CRM, your documents, your databases, your apps.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#what">Start the tour</a>
+        <a class="btn btn-ghost" href="#flow">See it in action ↓</a>
+      </div>
+      <div class="hero-analogy">
+        <div class="analogy-card">
+          <div class="analogy-icon">🔌</div>
+          <h3>Think "USB-C for AI"</h3>
+          <p>One standard plug. Any AI on one side, any business system on the other. No custom wiring for every connection.</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">Scroll to explore ↓</div>
+  </section>
+
+  <!-- WHAT -->
+  <section id="what" class="section">
+    <div class="section-head">
+      <span class="kicker">01 — The Idea</span>
+      <h2>What is MCP, really?</h2>
+      <p class="section-sub">
+        MCP (Model Context Protocol) is an <strong>open standard</strong> — a shared set of rules —
+        for how an AI assistant talks to the tools and data it needs to be useful at work.
+      </p>
+    </div>
+
+    <div class="cards-3">
+      <article class="card">
+        <div class="card-num">A common language</div>
+        <p>Instead of every company inventing its own way to connect AI to systems, MCP gives everyone the same "handshake." Build once, connect anywhere.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">A safe doorway</div>
+        <p>The AI never gets the keys to everything. MCP defines exactly which actions and data are exposed — with permission and oversight built in.</p>
+      </article>
+      <article class="card">
+        <div class="card-num">A two-way street</div>
+        <p>The AI can <em>read</em> information (a report, a record) and <em>do</em> things (file a ticket, send a draft) — all through the same controlled channel.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why" class="section section-alt">
+    <div class="section-head">
+      <span class="kicker">02 — The Problem</span>
+      <h2>Why we needed it: the "tangle of wires"</h2>
+      <p class="section-sub">
+        Before MCP, every AI app needed a custom-built connector for every tool. Connecting
+        <strong>M</strong> AI apps to <strong>N</strong> systems meant building <strong>M × N</strong> integrations.
+        That's expensive, fragile, and never finished.
+      </p>
+    </div>
+
+    <div class="before-after">
+      <div class="ba-col ba-before">
+        <h3>Before MCP — a spaghetti mess</h3>
+        <svg viewBox="0 0 320 220" class="wire-svg" id="svgBefore" aria-hidden="true"></svg>
+        <p class="ba-note"><strong>M × N</strong> custom connectors. Each one built, tested, and maintained by hand.</p>
+      </div>
+      <div class="ba-col ba-after">
+        <h3>With MCP — one standard hub</h3>
+        <svg viewBox="0 0 320 220" class="wire-svg" id="svgAfter" aria-hidden="true"></svg>
+        <p class="ba-note"><strong>M + N</strong> connections to a shared standard. Build to the protocol once.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section id="how" class="section">
+    <div class="section-head">
+      <span class="kicker">03 — The Building Blocks</span>
+      <h2>How it works: three simple roles</h2>
+      <p class="section-sub">Every MCP setup has the same three parts. Hover or tap each to learn more.</p>
+    </div>
+
+    <div class="arch">
+      <div class="arch-node" data-role="host">
+        <div class="arch-emoji">💬</div>
+        <h3>The Host</h3>
+        <p>The AI app your team uses — a chat assistant, a copilot in your tools, an agent.</p>
+        <div class="arch-detail">Example: a customer-support assistant your agents type into.</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-node" data-role="client">
+        <div class="arch-emoji">🔄</div>
+        <h3>The Client</h3>
+        <p>The built-in "translator" inside the Host that speaks the MCP standard.</p>
+        <div class="arch-detail">It manages the conversation between the AI and each connected system.</div>
+      </div>
+      <div class="arch-arrow">→</div>
+      <div class="arch-node" data-role="server">
+        <div class="arch-emoji">🗄️</div>
+        <h3>The Server</h3>
+        <p>A small adapter that exposes one system (e.g. Salesforce, Google Drive, a database) to the AI.</p>
+        <div class="arch-detail">Your IT team or a vendor builds/runs it. It decides what's allowed.</div>
+      </div>
+    </div>
+
+    <div class="primitives">
+      <h3 class="primitives-title">What a Server offers the AI</h3>
+      <div class="cards-3">
+        <article class="card prim">
+          <div class="prim-icon">🛠️</div>
+          <h4>Tools — "things it can do"</h4>
+          <p>Actions the AI can take: create a ticket, send an email draft, update a record, run a report.</p>
+        </article>
+        <article class="card prim">
+          <div class="prim-icon">📄</div>
+          <h4>Resources — "things it can read"</h4>
+          <p>Information the AI can pull in for context: a document, a customer record, today's sales numbers.</p>
+        </article>
+        <article class="card prim">
+          <div class="prim-icon">📋</div>
+          <h4>Prompts — "ready-made playbooks"</h4>
+          <p>Pre-approved templates that guide the AI through a task the right way, every time.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOW -->
+  <section id="flow" class="section section-alt">
+    <div class="section-head">
+      <span class="kicker">04 — End to End</span>
+      <h2>See it in action</h2>
+      <p class="section-sub">
+        Follow a real request from start to finish. Step through to watch how the pieces work together —
+        with a human in control at the key moment.
+      </p>
+    </div>
+
+    <div class="demo">
+      <div class="demo-stage">
+        <div class="lane" data-lane="user"><span>👤 Employee</span></div>
+        <div class="lane" data-lane="host"><span>💬 AI Host</span></div>
+        <div class="lane" data-lane="server"><span>🗄️ MCP Server</span></div>
+        <div class="lane" data-lane="system"><span>🏢 Business System</span></div>
+        <div id="demoBubble" class="demo-bubble">Press “Play” to begin a sample request.</div>
+      </div>
+
+      <div class="demo-steps" id="demoSteps"></div>
+
+      <div class="demo-controls">
+        <button id="btnPrev" class="btn btn-ghost">← Back</button>
+        <button id="btnPlay" class="btn btn-primary">▶ Play</button>
+        <button id="btnNext" class="btn btn-ghost">Next →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="uses" class="section">
+    <div class="section-head">
+      <span class="kicker">05 — In the Real World</span>
+      <h2>What businesses do with it</h2>
+      <p class="section-sub">The same standard, applied across every department.</p>
+    </div>
+
+    <div class="cards-4">
+      <article class="card uc">
+        <div class="uc-icon">🎧</div>
+        <h4>Customer Support</h4>
+        <p>The assistant looks up the customer's history, drafts a reply, and opens a refund ticket — without agents hopping between five tabs.</p>
+      </article>
+      <article class="card uc">
+        <div class="uc-icon">📊</div>
+        <h4>Sales &amp; CRM</h4>
+        <p>"Summarize this account and log my call notes." The AI reads the CRM and writes back the update, accurately.</p>
+      </article>
+      <article class="card uc">
+        <div class="uc-icon">📚</div>
+        <h4>Knowledge &amp; Docs</h4>
+        <p>Answers grounded in <em>your</em> policies and files — not generic guesses — by reading your document store on demand.</p>
+      </article>
+      <article class="card uc">
+        <div class="uc-icon">💸</div>
+        <h4>Finance &amp; Ops</h4>
+        <p>Pull live numbers from the database, flag anomalies, and prepare the report — with every figure traceable.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section id="value" class="section section-alt">
+    <div class="section-head">
+      <span class="kicker">06 — Why It Matters</span>
+      <h2>The business value, in plain terms</h2>
+    </div>
+
+    <div class="value-grid">
+      <div class="value-item"><span class="value-num">↓</span><h4>Lower integration cost</h4><p>Build to one standard instead of dozens of custom connectors. Reuse, don't rebuild.</p></div>
+      <div class="value-item"><span class="value-num">⚡</span><h4>Faster to launch</h4><p>Plug a new system into your AI in days, not quarters. The plumbing already exists.</p></div>
+      <div class="value-item"><span class="value-num">🔒</span><h4>Governed &amp; auditable</h4><p>Clear boundaries on what the AI can see and do, with approvals and logs at sensitive steps.</p></div>
+      <div class="value-item"><span class="value-num">🔁</span><h4>No vendor lock-in</h4><p>An open standard means you can switch AI providers or tools without ripping out integrations.</p></div>
+      <div class="value-item"><span class="value-num">🎯</span><h4>More accurate AI</h4><p>Grounded in your live data, the AI answers about your business — not the internet's guess.</p></div>
+      <div class="value-item"><span class="value-num">📈</span><h4>Scales with you</h4><p>Add the 20th system the same easy way you added the first. Complexity stays flat.</p></div>
+    </div>
+  </section>
+
+  <!-- GLOSSARY / FAQ -->
+  <section class="section">
+    <div class="section-head">
+      <span class="kicker">07 — Quick Reference</span>
+      <h2>Plain-English glossary</h2>
+    </div>
+    <div class="faq" id="faq">
+      <details><summary>Is MCP a product I buy?</summary><p>No — it's an open <em>standard</em>, like USB or HTTP. Vendors and your own teams build products and connectors that follow it. You "adopt" MCP rather than purchase it.</p></details>
+      <details><summary>Does the AI get full access to everything?</summary><p>No. Each MCP Server exposes only the specific tools and data it chooses to. Sensitive actions can require human approval, and everything can be logged.</p></details>
+      <details><summary>Who builds the connectors (Servers)?</summary><p>Often the software vendor (e.g. for a SaaS app), an open-source community, or your own IT team for in-house systems. Many are already available off the shelf.</p></details>
+      <details><summary>Is my data sent to train the AI?</summary><p>Not inherently. MCP just moves information to the AI to answer the request at hand. Your data-handling and retention policies still govern what happens — choose providers accordingly.</p></details>
+      <details><summary>How is this different from a normal API?</summary><p>APIs are how systems talk; MCP is a <em>standard way to describe</em> those systems so any AI can understand and use them safely — including the human-approval and context pieces AI needs.</p></details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="closer">
+    <h2>The one-sentence takeaway</h2>
+    <p class="closer-line">
+      <strong>MCP is the universal, secure adapter that lets AI assistants actually work with your business systems — build it once, connect everything.</strong>
+    </p>
+    <a class="btn btn-primary" href="#top">↑ Back to top</a>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>An educational explainer of the Model Context Protocol · Built for business audiences.</p>
+  <p class="footer-sub">Concepts are simplified for clarity. MCP is an open standard.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
